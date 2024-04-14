@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://ufo4mj168vdt"]
+
+[ext_resource type="Script" path="res://ratespiel.gd" id="1_bjwjg"]
+
+[node name="Ratespiel" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2.5
+offset_right = 2.5
+grow_horizontal = 2
+script = ExtResource("1_bjwjg")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = -66.5
+offset_top = 101.0
+offset_right = 117.5
+offset_bottom = 164.0
+grow_horizontal = 2
+text = "Klick mich"
+
+[node name="Titel" type="Label" parent="."]
+layout_direction = 2
+layout_mode = 2
+offset_left = -19.5
+offset_top = 39.0
+offset_right = 63.5
+offset_bottom = 65.0
+grow_horizontal = 2
+text = "Titel"
+horizontal_alignment = 1
+
+[node name="InfoLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = -26.5
+offset_top = 250.0
+offset_right = 73.5
+offset_bottom = 293.0
+text = "Info"
+
+[node name="SpinBox" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = -12.5
+offset_top = 180.0
+offset_right = 70.5625
+offset_bottom = 211.0
+max_value = 200.0
+
+[node name="ChekButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = -47.5
+offset_top = 330.0
+offset_right = 89.5
+offset_bottom = 382.0
+text = "Chek"
+
+[node name="Rateversuche" type="Label" parent="."]
+layout_mode = 0
+offset_left = -480.0
+offset_top = 262.0
+offset_right = -287.0
+offset_bottom = 335.0
+text = "Rateversuche"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ChekButton" to="." method="_on_chek_button_pressed"]
